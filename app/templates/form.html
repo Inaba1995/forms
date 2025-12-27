@@ -51,10 +51,10 @@
 
 
                 <div class="bg-white p-3 rounded shadow">
-                    {% for ancet in ancets %}
+                    {% for posts in posts %}
                     <div class="border-bottom pb-3 mb-3">
-                        <h4 class="text-primary">{{ ancet.title }}</h4>
-                        <p class="text-muted">{{ ancet.content }}</p>
+                        <h4 class="text-primary">{{ posts.title }}</h4>
+                        <p class="text-muted">{{ posts.content }}</p>
                     </div>
                     {% endfor %}
                 </div>
