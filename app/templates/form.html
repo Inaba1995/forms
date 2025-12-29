@@ -54,8 +54,10 @@
                 <div class="bg-white p-3 rounded shadow">
                     {% for post in posts %}
                     <div class="border-bottom pb-3 mb-3">
-                        <h4 class="text-primary">{{ post.title }}</h4>
-                        <p class="text-muted">{{ post.content }}</p>
+                        <p class="form-control">{{ post.name }}</p>
+                        <p class="form-control">{{ post.city }}</p>
+                        <p class="form-control">{{ post.hobby }}</p>
+                        <p class="form-control">{{ post.age }}</p>
                     </div>
                     {% endfor %}
                 </div>
