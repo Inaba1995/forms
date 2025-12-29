@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, url_for, flash, abort
+from flask import render_template, redirect, request, url_for
 
 from app import app
 
@@ -7,9 +7,11 @@ posts = []
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        title = request.form['title']
-        content = request.form['content']
-        if title and content:
-            posts.append({'title': title, 'content': content})
+        name = request.form['name']
+        city = request.form['city']
+        hobby = request.form['hobby']
+        age = request.form['age']
+        if name and city and hobby and age:
+            posts.append({'name': name, 'city': city, 'hobby': hobby, 'age': age})
             return redirect(url_for('index'))
-    return render_template('index.html', posts=posts)
+    return render_template('form.html', posts=posts)
